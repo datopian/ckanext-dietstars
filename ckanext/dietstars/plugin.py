@@ -9,24 +9,6 @@ import ckan.lib.helpers as h
 
 from webhelpers.html import literal
 
-
-def extended_build_nav(*args):
-    # we go through the args, add links for raw links, and then pass the rest to core build_nav_main
-    output = ''
-    for item in args:
-        menu_item, title = item[:2]
-
-        if len(item) == 3 and not check_access(item[2]):
-            continue
-
-        if menu_item.startswith('http') or menu_item.startswith('/'):
-            # it's a link
-            output += literal('<li><a href="%s">%s</a></li>' % (menu_item, title))
-        else:
-            # give it to the core helper for this
-            output += h._make_menu_item(menu_item, title)
-    return output
-
 open_licenses = ['cc-by', 'psi']
 five_star_formats = ['rdf', 'n3', 'sparql', 'ttl']
 four_star_formats = []
@@ -105,14 +87,11 @@ class DietStarsPlugin(plugins.SingletonPlugin):
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('fanstatic', 'dietstars')
 
     # ITemplateHelpers
 
     def get_helpers(self):
         return {
-            'extended_build_nav': extended_build_nav,
             'qa_openness_stars_resource_html': qa_openness_stars_resource_html,
             'qa_openness_stars_dataset_html': qa_openness_stars_dataset_html
         }
@@ -126,13 +105,12 @@ class DietStarsPlugin(plugins.SingletonPlugin):
         search_dict['openness_score'] = get_qa_dict(pkg_dict)['openness_score']
         return search_dict
 
+    # add the QA dict here so we can show it :)
     def before_view(self, pkg_dict):
-        # add the QA dict here so we can show it :)
         pkg_dict['qa'] = get_qa_dict(pkg_dict)
         return pkg_dict
 
     def after_show(self, context, pkg_dict):
-        # add the QA dict here so we can show it :)
         pkg_dict['qa'] = get_qa_dict(pkg_dict)
         return pkg_dict
 
