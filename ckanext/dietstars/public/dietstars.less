@@ -1,0 +1,181 @@
+@cork-black: #000;
+@cork-white: #fff;
+@cork-red: #b51f24;
+@cork-red-secondary: #ed1c24;
+@cork-purple: #9f3092;
+@cork-purple-secondary: #d788ba;
+@cork-blue: #0072bc;
+@cork-blue-secondary: #72cddb;
+@cork-green: #4c7520;
+@cork-green-secondary: #8dc63f;
+@cork-font-header: Helvetica; //proxima nova?
+@cork-font-body: Helvetica; //brandon grotesque?
+
+.gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+    background-image: -moz-linear-gradient(left, @startColor, @endColor);
+    background-image: -ms-linear-gradient(left, @startColor, @endColor);
+    background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+.cork-red-gradient-h {.horizontal-gradient(@startColor: @cork-red, @endColor: @cork-red-secondary);}
+.cork-purple-gradient-h {.horizontal-gradient(@startColor: @cork-purple, @endColor: @cork-purple-secondary);}
+.cork-blue-gradient-h {.horizontal-gradient(@startColor: @cork-blue, @endColor: @cork-blue-secondary);}
+.cork-green-gradient-h {.horizontal-gradient(@startColor: @cork-green, @endColor: @cork-green-secondary);}
+
+body {
+    font-family: @cork-font-body;
+    color: @cork-black;
+}
+
+.homepage {
+    background-color: @cork-white;
+    // max-height: 380px;
+}
+
+.hero-unit{
+    margin-bottom: 0px;
+}
+
+#front-page-hero {
+    background-image: url(http://www.corksmartgateway.ie/wp-content/uploads/2015/12/bg-8-1140x650.jpg);
+    background-size: cover;
+    color: @cork-white;
+
+    #header-wrapper {
+        padding: 14px 20px 14px 0px;
+        background-color: fade(darken(@cork-white, 50%), 60%);
+        border: 3px solid @cork-white;
+        margin-bottom: 8px;
+    }
+    h1,h2,h3,h4,h5 {
+        font-weight: 200;
+    }
+    #front-page-search-input {
+        padding: 14px 14px 14px 14px;
+    }
+    #front-page-search-input-icon {
+        padding: 14px 14px 14px 14px;
+        background-color: @cork-red;
+        border-color: @cork-red;
+        color: @cork-white;
+        .cork-red-gradient-h();
+    }
+
+    .btn.btn-primary {
+        padding: 14px 14px 14px 14px;
+    }
+}
+
+
+#frontpage-sections {
+    background-color: @cork-white;
+}
+
+#frontpage-notice {
+}
+
+
+
+/* =====================================================
+   The "account masthead" bar across the top of the site
+   ===================================================== */
+
+.account-masthead {
+    // background-color: darken(@cork-red, 7%);
+    // .cork-red-gradient-h()
+    background-color: @cork-white;
+}
+/* The "bubble" containing the number of new notifications. */
+.account-masthead .account .notifications a span {
+    background-color: black;
+}
+/* The text and icons in the user account info. */
+.account-masthead .account ul li {
+    border: none;
+}
+.account-masthead .account ul li a {
+    color: @cork-black;
+}
+/* The user account info text and icons, when the user's pointer is hovering
+   over them. */
+.account-masthead .account ul li a:hover {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: black;
+}
+
+
+/* ========================================================================
+   The main masthead bar that contains the site logo, nav links, and search
+   ======================================================================== */
+
+.masthead {
+    background-color: @cork-white;
+    // background-color: @cork-red;
+    // .cork-red-gradient-h();
+}
+.masthead .navigation .nav-pills li a {
+    color: @cork-black;
+}
+/* The "navigation pills" in the masthead (the links to Datasets,
+   Organizations, etc) when the user's pointer hovers over them. */
+.masthead .navigation .nav-pills li a:hover {
+    background-color: darken(@cork-red, 7%);
+    color: @cork-white;
+}
+/* The "active" navigation pill (for example, when you're on the /dataset page
+   the "Datasets" link is active). */
+.masthead .navigation .nav-pills li.active a {
+    background-color: darken(@cork-red, 12%);
+    color: @cork-white;
+}
+/* The "box shadow" effect that appears around the search box when it
+   has the keyboard cursor's focus. */
+.masthead input[type="text"]:focus {
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+.site-footer {
+    background-color: @cork-red;
+    .cork-red-gradient-h();
+    color: fade(@cork-white, 80%);
+
+    a {
+        color: fade(@cork-white, 80%);
+    }
+    label {
+        color: fade(@cork-white, 80%);
+    }
+}
+
+body {
+    background-color: @cork-red;
+    .cork-red-gradient-h();
+}
+
+
+.btn {
+    font-weight: 200;
+}
+.btn-primary {
+    background-color: @cork-red;
+    background-image: none;
+    border: @cork-red;
+    .cork-red-gradient-h();
+
+    &:hover {
+        background-image: none;
+        background-color: darken(@cork-red, 7%);
+    }
+}

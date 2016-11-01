@@ -1,0 +1,170 @@
+.cork-red-gradient-h {
+  background-color: #b51f24;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b51f24), to(#ed1c24));
+  background-image: -webkit-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -moz-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -ms-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -o-linear-gradient(left, #b51f24, #ed1c24);
+}
+.cork-purple-gradient-h {
+  background-color: #9f3092;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9f3092), to(#d788ba));
+  background-image: -webkit-linear-gradient(left, #9f3092, #d788ba);
+  background-image: -moz-linear-gradient(left, #9f3092, #d788ba);
+  background-image: -ms-linear-gradient(left, #9f3092, #d788ba);
+  background-image: -o-linear-gradient(left, #9f3092, #d788ba);
+}
+.cork-blue-gradient-h {
+  background-color: #0072bc;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0072bc), to(#72cddb));
+  background-image: -webkit-linear-gradient(left, #0072bc, #72cddb);
+  background-image: -moz-linear-gradient(left, #0072bc, #72cddb);
+  background-image: -ms-linear-gradient(left, #0072bc, #72cddb);
+  background-image: -o-linear-gradient(left, #0072bc, #72cddb);
+}
+.cork-green-gradient-h {
+  background-color: #4c7520;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4c7520), to(#8dc63f));
+  background-image: -webkit-linear-gradient(left, #4c7520, #8dc63f);
+  background-image: -moz-linear-gradient(left, #4c7520, #8dc63f);
+  background-image: -ms-linear-gradient(left, #4c7520, #8dc63f);
+  background-image: -o-linear-gradient(left, #4c7520, #8dc63f);
+}
+body {
+  font-family: Helvetica;
+  color: #000000;
+}
+.homepage {
+  background-color: #ffffff;
+}
+.hero-unit {
+  margin-bottom: 0px;
+}
+#front-page-hero {
+  background-image: url(http://www.corksmartgateway.ie/wp-content/uploads/2015/12/bg-8-1140x650.jpg);
+  background-size: cover;
+  color: #ffffff;
+}
+#front-page-hero #header-wrapper {
+  padding: 14px 20px 14px 0px;
+  background-color: rgba(128, 128, 128, 0.6);
+  border: 3px solid #ffffff;
+  margin-bottom: 8px;
+}
+#front-page-hero h1,
+#front-page-hero h2,
+#front-page-hero h3,
+#front-page-hero h4,
+#front-page-hero h5 {
+  font-weight: 200;
+}
+#front-page-hero #front-page-search-input {
+  padding: 14px 14px 14px 14px;
+}
+#front-page-hero #front-page-search-input-icon {
+  padding: 14px 14px 14px 14px;
+  border-color: #b51f24;
+  color: #ffffff;
+  background-color: #b51f24;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b51f24), to(#ed1c24));
+  background-image: -webkit-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -moz-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -ms-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -o-linear-gradient(left, #b51f24, #ed1c24);
+}
+#front-page-hero .btn.btn-primary {
+  padding: 14px 14px 14px 14px;
+}
+#frontpage-sections {
+  background-color: #ffffff;
+}
+/* =====================================================
+   The "account masthead" bar across the top of the site
+   ===================================================== */
+.account-masthead {
+  background-color: #ffffff;
+}
+/* The "bubble" containing the number of new notifications. */
+.account-masthead .account .notifications a span {
+  background-color: black;
+}
+/* The text and icons in the user account info. */
+.account-masthead .account ul li {
+  border: none;
+}
+.account-masthead .account ul li a {
+  color: #000000;
+}
+/* The user account info text and icons, when the user's pointer is hovering
+   over them. */
+.account-masthead .account ul li a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: black;
+}
+/* ========================================================================
+   The main masthead bar that contains the site logo, nav links, and search
+   ======================================================================== */
+.masthead {
+  background-color: #ffffff;
+}
+.masthead .navigation .nav-pills li a {
+  color: #000000;
+}
+/* The "navigation pills" in the masthead (the links to Datasets,
+   Organizations, etc) when the user's pointer hovers over them. */
+.masthead .navigation .nav-pills li a:hover {
+  background-color: #971a1e;
+  color: #ffffff;
+}
+/* The "active" navigation pill (for example, when you're on the /dataset page
+   the "Datasets" link is active). */
+.masthead .navigation .nav-pills li.active a {
+  background-color: #81161a;
+  color: #ffffff;
+}
+/* The "box shadow" effect that appears around the search box when it
+   has the keyboard cursor's focus. */
+.masthead input[type="text"]:focus {
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+}
+.site-footer {
+  background-color: #b51f24;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b51f24), to(#ed1c24));
+  background-image: -webkit-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -moz-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -ms-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -o-linear-gradient(left, #b51f24, #ed1c24);
+  color: rgba(255, 255, 255, 0.8);
+}
+.site-footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.site-footer label {
+  color: rgba(255, 255, 255, 0.8);
+}
+body {
+  background-color: #b51f24;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b51f24), to(#ed1c24));
+  background-image: -webkit-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -moz-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -ms-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -o-linear-gradient(left, #b51f24, #ed1c24);
+}
+.btn {
+  font-weight: 200;
+}
+.btn-primary {
+  background-image: none;
+  border: #b51f24;
+  background-color: #b51f24;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b51f24), to(#ed1c24));
+  background-image: -webkit-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -moz-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -ms-linear-gradient(left, #b51f24, #ed1c24);
+  background-image: -o-linear-gradient(left, #b51f24, #ed1c24);
+}
+.btn-primary:hover {
+  background-image: none;
+  background-color: #971a1e;
+}
