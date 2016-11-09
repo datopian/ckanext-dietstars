@@ -43,7 +43,7 @@ def get_qa_dict(pkg_dict):
     elif (share_elements(resource_formats, three_star_formats)):
         qa_dict['openness_score'] = 3
         qa_dict['openness_score_reason'] = 'One of the resource formats is 3-star data - machine-readable data in an open format.'
-    elif (share_elements(resource_formats, four_star_formats)):
+    elif (share_elements(resource_formats, two_star_formats)):
         qa_dict['openness_score'] = 2
         qa_dict['openness_score_reason'] = 'One of the resource formats is 2-star data - machine-readable data in a proprietary format.'
 
