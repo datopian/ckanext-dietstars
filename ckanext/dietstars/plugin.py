@@ -15,6 +15,7 @@ four_star_formats = []
 three_star_formats = ["kml", "wcs", "netcdf", "tsv", "wfs", "kmz", "qgis", "ods", "json", "odb", "odf", "odg", "xml", "wms", "wmts", "svg", "jpeg", "csv", "atom feed", "xyz", "png", "rss", "geojson", "iati", "ics",]
 two_star_formats = ['shp', "xls", "mdb", "arcgis map service", "bmp", "tiff", "xlsx", "gif", "e00", "mrsid", "arcgis map preview", "mop", "esri rest", "dbase"]
 
+
 def get_qa_dict(pkg_dict):
     # we'll use the same format the ckanext-qa extension uses
     qa_dict = {'openness_score_reason': '', 'openness_score': 0}
@@ -49,6 +50,7 @@ def get_qa_dict(pkg_dict):
 
     return qa_dict
 
+
 def qa_openness_stars_resource_html(resource):
     qa = resource.get('qa')
     if not qa:
@@ -76,6 +78,7 @@ def qa_openness_stars_dataset_html(dataset):
     return toolkit.literal(
         toolkit.render('qa/openness_stars_brief.html',
                   extra_vars=extra_vars))
+
 
 class DietStarsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
