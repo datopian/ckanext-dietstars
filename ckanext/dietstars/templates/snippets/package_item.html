@@ -2,7 +2,7 @@
 
 {% block banner %}
     {% set score = package.get('qa').get('openness_score') %}
-    {% if score %}
+    {% if score is number %}
         <div class="package_stars" style="margin-bottom: 4px;">
             {% if score == 5 %}
                 <span>
