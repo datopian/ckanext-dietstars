@@ -9,7 +9,7 @@ import ckan.lib.helpers as h
 
 from webhelpers.html import literal
 
-open_licenses = ['cc-by', 'psi']
+open_licenses = ['cc-by-4.0', 'psi', 'cc-by', 'cc-by-3.0', 'cc-by-2.0', 'cc0', 'gfdl', 'pddl', 'odc-by']
 five_star_formats = ['rdf', 'n3', 'sparql', 'ttl']
 four_star_formats = []
 three_star_formats = ["kml", "wcs", "netcdf", "tsv", "wfs", "kmz", "qgis", "ods", "json", "odb", "odf", "odg", "xml", "wms", "wmts", "svg", "jpeg", "csv", "atom feed", "xyz", "png", "rss", "geojson", "iati", "ics",]
@@ -22,7 +22,7 @@ def get_qa_dict(pkg_dict):
 
     license_id = pkg_dict.get('license_id')
     # pretty easy - first check if the license is open
-    if (license_id not in open_licenses):
+    if (license_id.lower() not in open_licenses):
         qa_dict['openness_score_reason'] = 'The dataset license is not in our list of Open Licenses.'
         return qa_dict
 
