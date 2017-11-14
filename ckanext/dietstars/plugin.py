@@ -21,6 +21,10 @@ def get_qa_dict(pkg_dict):
     qa_dict = {'openness_score_reason': '', 'openness_score': 0}
 
     license_id = pkg_dict.get('license_id')
+    
+    if license_id is None:
+        return {'openness_score': 0, 'openness_score_reason': "No license supplied"}
+    
     # pretty easy - first check if the license is open
     if (license_id.lower() not in open_licenses):
         qa_dict['openness_score_reason'] = 'The dataset license is not in our list of Open Licenses.'
