@@ -12,7 +12,7 @@ from webhelpers.html import literal
 open_licenses = ['cc-by-4.0', 'psi', 'cc-by', 'cc-by-3.0', 'cc-by-2.0', 'cc-zero', 'cc0', 'gfdl', 'pddl', 'odc-by', 'uk-ogl']
 five_star_formats = ['rdf', 'n3', 'sparql', 'ttl']
 four_star_formats = []
-three_star_formats = ["kml", "wcs", "netcdf", "tsv", "wfs", "kmz", "qgis", "ods", "json", "odb", "odf", "odg", "xml", "wms", "wmts", "svg", "jpeg", "csv", "atom feed", "xyz", "png", "rss", "geojson", "iati", "ics", "api"]
+three_star_formats = ["kml", "wcs", "netcdf", "tsv", "wfs", "kmz", "qgis", "ods", "json", "odb", "odf", "odg", "xml", "wms", "wmts", "svg", "jpeg", "csv", "atom feed", "xyz", "png", "rss", "geojson", "iati", "ics", "api", "json-stat", "jsonstat", "gtfs", "shp / zip", "shp.zip", "tab"]
 two_star_formats = ['shp', "xls", "mdb", "arcgis map service", "bmp", "tiff", "xlsx", "gif", "e00", "mrsid", "arcgis map preview", "mop", "esri rest", "dbase"]
 
 
