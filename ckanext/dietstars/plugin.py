@@ -5,6 +5,7 @@ import pylons.config as config
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+import ckan.plugins.toolkit.model as model
 import ckan.lib.helpers as h
 
 from webhelpers.html import literal
@@ -26,9 +27,11 @@ def get_qa_dict(pkg_dict):
         return {'openness_score': 0, 'openness_score_reason': "No license supplied"}
     
     # pretty easy - first check if the license is open
-    if (license_id.lower() not in open_licenses):
+    register = model.Package.get_license_register()
+    if register.get(license_id).isopen() == False and license_id.lower() not in open_licenses:
         qa_dict['openness_score_reason'] = 'The dataset license is not in our list of Open Licenses.'
         return qa_dict
+    
 
     # now it's at least 1-star
     qa_dict['openness_score'] = 1
