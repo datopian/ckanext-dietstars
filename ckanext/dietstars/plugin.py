@@ -5,7 +5,7 @@ import pylons.config as config
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-import ckan.plugins.toolkit.model as model
+import ckan.model as model
 import ckan.lib.helpers as h
 
 from webhelpers.html import literal
