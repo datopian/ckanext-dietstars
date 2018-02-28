@@ -28,7 +28,7 @@ def get_qa_dict(pkg_dict):
     
     # pretty easy - first check if the license is open
     register = model.Package.get_license_register()
-    if register.get(license_id).isopen() == False and license_id.lower() not in open_licenses:
+    if (not register.get(license_id) or register.get(license_id).isopen() == False) and license_id.lower() not in open_licenses:
         qa_dict['openness_score_reason'] = 'The dataset license is not in our list of Open Licenses.'
         return qa_dict
     
