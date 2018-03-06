@@ -103,7 +103,8 @@ class DietStarsPlugin(plugins.SingletonPlugin):
     def get_helpers(self):
         return {
             'qa_openness_stars_resource_html': qa_openness_stars_resource_html,
-            'qa_openness_stars_dataset_html': qa_openness_stars_dataset_html
+            'qa_openness_stars_dataset_html': qa_openness_stars_dataset_html,
+            'get_qa_dict': get_qa_dict
         }
 
     # IPackageController
