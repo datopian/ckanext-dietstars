@@ -11,7 +11,7 @@ import ckan.lib.helpers as h
 from webhelpers.html import literal
 
 open_licenses = ['cc-by-4.0', 'psi', 'cc-by', 'cc-by-3.0', 'cc-by-2.0', 'cc-zero', 'cc0', 'gfdl', 'pddl', 'odc-by', 'uk-ogl']
-five_star_formats = ['rdf', 'n3', 'sparql', 'ttl']
+five_star_formats = ['rdf', 'n3', 'sparql', 'ttl', 'rdf-xml', 'jsonld']
 four_star_formats = []
 three_star_formats = ["kml", "wcs", "netcdf", "tsv", "wfs", "kmz", "qgis", "ods", "json", "odb", "odf",
                       "odg", "xml", "ods", "wms", "wmts", "svg", "jpeg", "csv", "csv.zip", "csv / zip",
