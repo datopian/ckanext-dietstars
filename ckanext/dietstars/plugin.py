@@ -16,7 +16,7 @@ four_star_formats = []
 three_star_formats = ["kml", "wcs", "netcdf", "tsv", "wfs", "kmz", "qgis", "ods", "json", "odb", "odf",
                       "odg", "xml", "ods", "wms", "wmts", "svg", "jpeg", "csv", "csv.zip", "csv / zip",
                       "atom feed", "xyz", "png", "rss", "geojson", "iati", "ics", "api", "json-stat",
-                      "jsonstat", "gtfs", "shp / zip", "shp.zip", "tab", 'shp', 'gml']
+                      "jsonstat", "gtfs", "shp / zip", "shp.zip", "tab", 'shp', 'gml', 'hdf5']
 
 two_star_formats = ["xls", "mdb", "arcgis map service", "bmp", "tiff", "xlsx", "gif", "e00", "mrsid",
                     "arcgis map preview", "mop", "esri rest", "dbase"]
