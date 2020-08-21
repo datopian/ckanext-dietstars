@@ -2,9 +2,12 @@
 
 {% block banner %}
     {% if package.get('type') == 'dataset' %}
-        {% set score = package.get('qa', {'openness_score': 0, 'reason': 'No QA present on dataset'}).get('openness_score') %}
+        {% set qa_dict = h.get_qa_dict(package) %}
+        {% set score = qa_dict['openness_score'] %}
+        {# {% set score = package.get('qa', {'openness_score': 0, 'reason': 'No QA present on dataset'}).get('openness_score') %} #}
         {% if score is number %}
             <div class="package_stars" style="margin-bottom: 4px;">
+
                 {% if score == 5 %}
                     <span>
                         <span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span>
