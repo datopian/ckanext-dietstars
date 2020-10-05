@@ -101,7 +101,11 @@ class DietStarsPlugin(plugins.SingletonPlugin):
     # IConfigurer
 
     def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
+        try:
+            toolkit.requires_ckan_version("2.9")
+            toolkit.add_template_directory(config_, 'templates')
+        except toolkit.CkanVersionException:
+            toolkit.add_template_directory(config_, 'templates_28')
 
     # ITemplateHelpers
 

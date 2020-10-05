@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% block resource_additional_information_inner %}
+    {{ super() }}
+    <br>
+    {{ h.qa_openness_stars_resource_html(c.resource) }}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% ckan_extends %}
+
+{% block banner %}
+    {% if package.get('type') == 'dataset' %}
+        {% set score = package.get('qa', {'openness_score': 0, 'reason': 'No QA present on dataset'}).get('openness_score') %}
+        {% if score is number %}
+            <div class="package_stars" style="margin-bottom: 4px;">
+                {% if score == 5 %}
+                    <span>
+                        <span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span>
+                    </span>
+                {% elif score == 4 %}
+                    <span>
+                        <span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star-o"></span>
+                    </span>
+                {% elif score == 3 %}
+                    <span>
+                        <span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span>
+                    </span>
+                {% elif score == 2 %}
+                    <span>
+                        <span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span>
+                    </span>
+                {% elif score == 1 %}
+                    <span>
+                        <span style="display:inline" class="fa fa-star"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span>
+                    </span>
+                {% elif score == 0 %}
+                    <span>
+                        <span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span><span style="display:inline" class="fa fa-star-o"></span>
+                    </span>
+                {% endif %}
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock %}
