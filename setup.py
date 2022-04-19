@@ -78,8 +78,8 @@ setup(
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
-        [ckan.plugins]
-        dietstars=ckanext.dietstars.plugin:DietStarsPlugin
+    [ckan.plugins]
+    dietstars=ckanext.dietstars.plugin:DietStarsPlugin
 	[babel.extractors]
 	ckan = ckan.lib.extract:extract_ckan
     ''',

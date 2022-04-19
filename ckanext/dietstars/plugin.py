@@ -1,14 +1,13 @@
 import copy
 import json
+from os import PRIO_USER
 
-import pylons.config as config
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckan.model as model
 import ckan.lib.helpers as h
 
-from webhelpers.html import literal
 
 open_licenses = ['cc-by-4.0', 'psi', 'cc-by', 'cc-by-3.0', 'cc-by-2.0', 'cc-zero', 'cc0', 'gfdl', 'pddl', 'odc-by', 'uk-ogl']
 five_star_formats = ['rdf', 'n3', 'sparql', 'ttl', 'rdf-xml', 'jsonld']
@@ -118,7 +117,7 @@ class DietStarsPlugin(plugins.SingletonPlugin):
         # we add the QA dict here so we can facet
         # print pkg_dict
         pkg_dict = json.loads(search_dict['data_dict'])
-        search_dict['openness_score'] = get_qa_dict(pkg_dict)['openness_score']
+        search_dict['extras_openness_score'] = get_qa_dict(pkg_dict)['openness_score']
         return search_dict
 
     # add the QA dict here so we can show it :)
@@ -131,8 +130,13 @@ class DietStarsPlugin(plugins.SingletonPlugin):
         return pkg_dict
 
     # IFacets
-
     def dataset_facets(self, facets_dict, package_type):
         if (package_type == 'dataset'):
-            facets_dict['openness_score'] = plugins.toolkit._('Openness')
+            facets_dict['extras_openness_score'] = plugins.toolkit._('Openness')
         return facets_dict
+
+    def after_search(self, search_results, search_params):
+        for pkg_item in search_results['results']: 
+                pkg_item['qa'] = get_qa_dict(pkg_item)
+
+        return search_results
